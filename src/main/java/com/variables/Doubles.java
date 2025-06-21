@@ -1,5 +1,6 @@
 package com.variables;
 
+// Double print
 public class Doubles {
     public static void main(String[] args) {
         double d1 = 5.0;
