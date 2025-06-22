@@ -1,4 +1,4 @@
-package com.variables.input;
+package com.input;
 
 import java.util.Scanner;
 

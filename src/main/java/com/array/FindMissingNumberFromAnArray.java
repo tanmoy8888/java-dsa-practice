@@ -1,4 +1,4 @@
-package com.variables.array;
+package com.array;
 
 /**
  *  Given an integer N and an array of size N-1 containing N-1 numbers between 1 to N.
