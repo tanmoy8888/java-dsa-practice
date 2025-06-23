@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Take three positive integers and found max among them
  */
-public class MaxAmongThree {
+public class FindMaxAmongThreeIntegers {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
