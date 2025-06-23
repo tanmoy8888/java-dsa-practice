@@ -1,5 +1,9 @@
 package com.if_else;
 
+/**
+ * Take input of three coordinates , write a program to check whether they will fall on a startght line or not.
+ */
+
 import java.util.Scanner;
 
 public class ThreePointsAreInStraightLine {
