@@ -1,7 +1,7 @@
 package com.if_else;
 
 /**
- * Take input of three coordinates , write a program to check whether they will fall on a startght line or not.
+ * Take input of three coordinates , write a program to check whether they will fall on a straight line or not.
  */
 
 import java.util.Scanner;
