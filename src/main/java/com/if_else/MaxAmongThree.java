@@ -3,7 +3,7 @@ package com.if_else;
 import java.util.Scanner;
 
 /**
- * Take three positive integers and found max
+ * Take three positive integers and found max among them
  */
 public class MaxAmongThree {
     public static void main(String[] args) {
