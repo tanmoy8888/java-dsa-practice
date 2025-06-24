@@ -7,9 +7,7 @@ public class PrintEvenNumbersFromCertainRange {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
         for (int i = 1; i <=N ; i++) {
-            if(i % 2 ==0){
-                System.out.println(i);
-            }
+            if(i % 2 ==0) System.out.println(i);
         }
     }
 }
