@@ -23,5 +23,5 @@ public class PrintingTable {
                 System.out.println(i);
             }
         }
-    
+
 }
