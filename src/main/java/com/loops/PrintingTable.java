@@ -10,11 +10,18 @@ public class PrintingTable {
             System.out.println("Table of "+number+" , "+i+" is "+i*number);
         }*/
 
-        // Another approach 
-        for (int i = 19; i <= 190; i++) {
+        // Another approach
+       /* for (int i = 19; i <= 190; i++) {
             if(i % 19 ==0){
                 System.out.println(i);
             }
+        }*/
+
+        // Further optimization ,
+
+        for (int i = 19; i <= 190; i=i+19) {
+                System.out.println(i);
+            }
         }
-    }
+    
 }
