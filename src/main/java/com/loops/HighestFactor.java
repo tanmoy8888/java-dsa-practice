@@ -18,9 +18,19 @@ public class HighestFactor {
                 factor = i;
             }
         }*/
-        for (int i = 1; i <N ; i++) {
+       /* for (int i = 1; i <N ; i++) {
             if(N%i == 0){
                 factor = i;
+            }
+        }*/
+
+        /**
+         *  Optimized code , if we start iteration from back then it can reduce the number of iteration
+         */
+        for (int i = N-1; i >=1 ; i--) {
+            if(N%i == 0){
+                factor = i;
+                break;
             }
         }
         System.out.println(factor);
