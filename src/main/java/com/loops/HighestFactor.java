@@ -13,8 +13,13 @@ public class HighestFactor {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
         int factor = -1;
-        for (int i = 1; i <=N ; i++) {
+      /*  for (int i = 1; i <=N ; i++) {
             if(N%i == 0 && N != i){
+                factor = i;
+            }
+        }*/
+        for (int i = 1; i <N ; i++) {
+            if(N%i == 0){
                 factor = i;
             }
         }
