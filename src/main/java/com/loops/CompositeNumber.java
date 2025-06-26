@@ -7,7 +7,7 @@ public class CompositeNumber {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
         boolean isComposite = false;
-        for (int i = 2; i <N-1; i++) {
+        for (int i = 2; i <N; i++) {
             if(N%i == 0){
                 isComposite = true;
             }
