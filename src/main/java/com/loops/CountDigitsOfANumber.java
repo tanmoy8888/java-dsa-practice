@@ -23,9 +23,10 @@ public class CountDigitsOfANumber {
         }
     }*/
 
-    // Optimized code 
+    // Optimized code
    private static int countDigit(int input){
        int count=0;
+       if(input == 0) count++;
        while (input !=0){
            input/=10;
            count++;
