@@ -13,6 +13,7 @@ public class CompositeNumber {
         for (int i = 2; i <N; i++) {
             if(N%i == 0){
                 isComposite = true;
+                break;
             }
         }
         System.out.println("isComposite = " + isComposite);
