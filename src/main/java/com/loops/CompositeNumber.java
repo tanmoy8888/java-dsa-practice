@@ -2,6 +2,9 @@ package com.loops;
 
 import java.util.Scanner;
 
+/**
+ * Find a number composite if it has a factor more than three.
+ */
 public class CompositeNumber {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
