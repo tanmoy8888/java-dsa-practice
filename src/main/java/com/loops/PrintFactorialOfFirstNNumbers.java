@@ -4,25 +4,23 @@ import java.util.Scanner;
 
 /**
  * I/P = > 5
- * O/P =>  1! , 2! , 3! , 4! , 5!
+ * O/P =>  1! , 2! , 3! , 4! , 5! , complexity N [using single loop]
  */
 public class PrintFactorialOfFirstNNumbers {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int number = sc.nextInt();
-        for (int i = 0; i <= number; i++) {
-            System.out.println("factorial() of "+i+" is , " + factorial(i));
-        }
+        factorial(number);
     }
-    private static int factorial(int i) {
+    private static void factorial(int number) {
         int fact = 1;
-        if (i == 0) return 1;
-        else if (i > 0) {
-            while (i != 0) {
-                fact *= i;
-                i--;
-            }
+        for (int i = 0; i <=number; i++) {
+           if(i ==0 || i ==1){
+               fact = 1;
+           }else {
+               fact = fact*i;
+           }
+            System.out.println("fact = of "+i+" is , " + fact);
         }
-        return fact;
     }
 }
