@@ -12,8 +12,11 @@ public class ProductOfAllDigitsOfANumber {
             reminder = number%10;
             if(number <0){
                 product *=product*number;
+                break;
             }
-            product *= reminder;
+            if(reminder > 0) {
+                product *= reminder;
+            }
             number = number/10;
         }
         System.out.println("product = " + product);
