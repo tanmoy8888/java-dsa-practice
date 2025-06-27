@@ -7,9 +7,14 @@ public class Factorial {
         Scanner sc = new Scanner(System.in);
         int number = sc.nextInt();
         int fact = 1;
+        /*
         while (number != 0){
             fact = number*fact;
             number--;
+        }*/
+        // using for loop
+        for (int i = number; i >0 ; i--) {
+            fact = fact*i;
         }
         System.out.println("fact = " + fact);
     }
