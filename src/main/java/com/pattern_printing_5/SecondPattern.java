@@ -1,24 +1,24 @@
-package com.pattern_printing;
+package com.pattern_printing_5;
 
 import java.util.Scanner;
 
 /**
- * I/P => N , N can be a positive integer
- * Example : N = 4 ,
+ *  Print this below pattern
+ * Input => N ,
+ * Example : N => 4
+ * O/P =>
+ *  1234
+ *  1234
+ *  1234
+ *  1234
  *
- * O/P=>
- * 1
- * 1 2
- * 1 2 3
- * 1 2 3 4
  */
-
-public class SixthPattern {
+public class SecondPattern {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int number = sc.nextInt();
         for (int i = 1; i <=number ; i++) {
-            for (int j = 1; j <=i; j++) {
+            for (int j = 1; j <= number ; j++) {
                 System.out.print(j+" ");
             }
             System.out.println();

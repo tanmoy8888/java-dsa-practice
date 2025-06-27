@@ -1,6 +1,4 @@
-package com.pattern_printing;
-
-import java.util.Scanner;
+package com.pattern_printing_5;
 
 /**
  *

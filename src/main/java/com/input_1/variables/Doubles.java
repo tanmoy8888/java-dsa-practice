@@ -1,4 +1,4 @@
-package com.variables;
+package com.input_1.variables;
 
 // Double print
 public class Doubles {

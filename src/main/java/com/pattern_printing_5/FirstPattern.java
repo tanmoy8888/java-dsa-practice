@@ -1,4 +1,4 @@
-package com.pattern_printing;
+package com.pattern_printing_5;
 
 public class FirstPattern {
     public static void main(String[] args) {
