@@ -5,7 +5,9 @@ import java.util.Scanner;
 public class ReverseANumber {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int number = sc.nextInt();
+        //int number = sc.nextInt();
+        final int originalNumber = sc.nextInt();
+        int number = originalNumber;
         int reminder = 0;
         int reverse = 0;
 
@@ -26,10 +28,10 @@ public class ReverseANumber {
         while (number != 0){
             reminder = number%10;
             reverse *= 10;
-            reverse = reverse+reminder;
+            reverse +=reminder;
             number = number/10;
         }
         System.out.println("reverse = " + reverse);
-
+        System.out.println("Sum of both = "+(originalNumber+reverse));
     }
 }
