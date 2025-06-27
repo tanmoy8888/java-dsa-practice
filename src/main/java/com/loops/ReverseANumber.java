@@ -9,7 +9,7 @@ public class ReverseANumber {
         int reminder = 0;
         int reverse = 0;
 
-        while (number > 0){
+        while (number != 0){
             if(number < 10){
                 reverse = reverse+number;
                 break;
