@@ -14,7 +14,7 @@ public class Factorial {
         }*/
         // using for loop
         for (int i = number; i >0 ; i--) {
-            fact = fact*i;
+            fact*=i;
         }
         System.out.println("fact = " + fact);
     }
