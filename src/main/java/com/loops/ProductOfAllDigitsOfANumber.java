@@ -10,7 +10,7 @@ public class ProductOfAllDigitsOfANumber {
         int reminder = 0;
         while (number > 0){
             reminder = number%10;
-            if(number <0){
+            if(number < 10){
                 product *=product*number;
                 break;
             }
