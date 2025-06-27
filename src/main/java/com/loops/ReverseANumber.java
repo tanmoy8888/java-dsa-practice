@@ -9,7 +9,7 @@ public class ReverseANumber {
         int reminder = 0;
         int reverse = 0;
 
-        while (number != 0){
+       /* while (number != 0){
             if(number < 10){
                 reverse = reverse+number;
                 break;
@@ -18,6 +18,15 @@ public class ReverseANumber {
                 reminder = number % 10;
                 reverse = (reverse + reminder) * 10;
             }
+            number = number/10;
+        }*/
+
+        // Another approach
+
+        while (number != 0){
+            reminder = number%10;
+            reverse *= 10;
+            reverse = reverse+reminder;
             number = number/10;
         }
         System.out.println("reverse = " + reverse);
