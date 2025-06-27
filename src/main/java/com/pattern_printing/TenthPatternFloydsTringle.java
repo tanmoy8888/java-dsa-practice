@@ -3,29 +3,25 @@ package com.pattern_printing;
 import java.util.Scanner;
 
 /**
- * Print this below pattern ,
- * I/P => 4
- *
- * O/P =>
  *  1
- *  1 3
- *  1 3 5
- *  1 3 5 7
- *
- *  Hint : (2j-1)  // Check this !!
+ *  2 3
+ *  4 5 6
+ *  7 8 9 10
  *
  */
-public class NinthPattern {
+
+public class TenthPatternFloydsTringle {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int number = sc.nextInt();
-        for (int i = 1; i<=number ; i++) {
+        int a = 1;
+        for (int i = 1; i <= number; i++) {
             for (int j = 1; j <= i; j++) {
-                System.out.print((2*j-1)+" ");
+               /* System.out.print(a+" ");
+                a++;*/
+                System.out.print(a++ +" ");
             }
             System.out.println();
         }
-
     }
-
 }
