@@ -12,21 +12,20 @@ public class ReverseInteger {
     // 2147483647
     // 1534236469
     // O/P 1056389759
-    public static int reverse(int x) {
-        int reverse = 0;
-        int reminder = 0;
-        System.out.println(Integer.MAX_VALUE);
+    public static BigInteger reverse(int x) {
+        BigInteger reverse = BigInteger.ZERO;
+        BigInteger reminder = BigInteger.ZERO;
         final int input = x;
         x = Math.abs(x);
         while (x!=0){
             if(x < 10){
-                reverse = (reverse*10)+x;
+                reverse =  reverse.multiply(BigInteger.valueOf(10)).add(BigInteger.valueOf(x));
                 break;
             }
-            reminder = x%10; // 3 , 2
-            reverse=(reverse*10)+reminder; // 3*10 = 30 +2 =32
+            reminder = BigInteger.valueOf(x).remainder(BigInteger.valueOf(10));
+            reverse =  reverse.multiply(BigInteger.valueOf(10)).add(reminder);
             x = x/10; // 12 , 1
         }
-        return (input >0) ? reverse : -reverse;
+        return (input >0) ? reverse : reverse.multiply(BigInteger.valueOf(-1));
     }
 }
