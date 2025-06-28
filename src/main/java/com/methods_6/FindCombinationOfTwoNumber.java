@@ -8,10 +8,17 @@ public class FindCombinationOfTwoNumber {
         int n = sc.nextInt();
         int r = sc.nextInt();
         System.out.println("findCombination() is " + findCombination(n,r));
+        System.out.println("findPermutation() is " + findPermutation(n,r));
+
     }
 
     private static int findCombination(int n , int r){
         if( n > r) return factorial(n)/(factorial(r) * factorial(n-r));
+        else return -1;
+    }
+
+    private static int findPermutation(int n , int r){
+        if( n > r) return factorial(n)/factorial(n-r);
         else return -1;
     }
 
