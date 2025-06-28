@@ -8,6 +8,7 @@ public class MaxOfThree {
         int a = 6;
         int b = 8;
         int c = 10;
+        int d = 12;
  /*
         int max1 = Math.max(a, b);
         int max2 = Math.max(a, c);
@@ -23,7 +24,7 @@ public class MaxOfThree {
         else {
             System.out.println("C is maximum");
         }*/
-    int max = Math.max(a,Math.max(b,c));
-        System.out.println(max);
+    int max = Math.max(a,Math.max(b,Math.max(c,d)));
+    System.out.println(max);
     }
 }
