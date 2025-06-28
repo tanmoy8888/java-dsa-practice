@@ -1,6 +1,7 @@
 package com.methods_6;
 
 import java.util.Scanner;
+// Swap two numbers using a temp variable
 
 public class SwapNumbers {
     public static void main(String[] args) {
