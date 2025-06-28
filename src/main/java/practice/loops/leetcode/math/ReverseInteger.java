@@ -1,6 +1,5 @@
-package practice.loops;
+package practice.loops.leetcode.math;
 
-import java.math.BigInteger;
 import java.util.Scanner;
 
 public class ReverseInteger {
