@@ -19,6 +19,7 @@ public class PascalTriangle {
         Scanner sc = new Scanner(System.in);
         int number = sc.nextInt();
         for (int i = 0; i <=number ; i++) {
+            // Printing space to make it align with O/P
             for (int j = 0; j <number-i ; j++) {
                 System.out.print(" ");
             }
