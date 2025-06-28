@@ -2,10 +2,10 @@ package com.methods_6;
 
 public class PassingArguments {
     public static void main(String[] args) {
-     greet("Rahul");
+     greet("Rahul",27);
     }
-    private static void greet(String name){
-        System.out.println("Hello , "+name+" !!");
+    private static void greet(String name,int age){
+        System.out.println("Hello , "+name+" !!"+" , your age is :: "+age);
     }
 
 }
