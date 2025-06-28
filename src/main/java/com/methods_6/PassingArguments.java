@@ -5,6 +5,7 @@ public class PassingArguments {
      greet("Rahul",27);
     }
     private static void greet(String name,int age){
+        System.out.println("Good Morning !!");
         System.out.println("Hello , "+name+" !!"+" , your age is :: "+age);
     }
 
