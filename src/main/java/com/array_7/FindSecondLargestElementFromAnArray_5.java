@@ -1,5 +1,9 @@
 package com.array_7;
 
+/**
+ * Find second maximum element from an array
+ */
+
 public class FindSecondLargestElementFromAnArray_5 {
     public static void main(String[] args) {
         int [] arr = {-10,-2,-5,-3,-6,-7,-4,-9,-1};
