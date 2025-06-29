@@ -15,7 +15,7 @@ public class RemoveElement {
         System.out.println("removeElement(nums,val) = " + removeElement(nums, val));
     }
 
-    public static int removeElement(int[] nums, int val) {
+    /*public static int removeElement(int[] nums, int val) {
       int count =0;
         for (int i = 0; i < nums.length; i++) {
             if(nums[i] != val){
@@ -24,5 +24,20 @@ public class RemoveElement {
             }
         }
         return count;
+    }*/
+
+    public static int removeElement(int[] nums, int val) {
+        int start =0;
+        int end =nums.length-1;
+        while (start < end){
+            if (nums[start] == val){
+                nums[start] = nums[end-1];
+                end--;
+            }
+            else {
+                start++;
+            }
+        }
+        return end;
     }
 }
