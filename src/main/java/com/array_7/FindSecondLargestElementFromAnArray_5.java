@@ -6,7 +6,7 @@ package com.array_7;
 
 public class FindSecondLargestElementFromAnArray_5 {
     public static void main(String[] args) {
-        int [] arr = {-10,-2,-5,-3,-6,-7,-4,-9,-1};
+        int [] arr = {-10,-2,-5,-3,-6,-1,-2,-7,-4,-1,-9,-1};
         int maximum = arr[0];
         for (int i = 0; i < arr.length; i++) {
             if(maximum < arr[i]){
