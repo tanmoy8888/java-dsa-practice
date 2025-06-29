@@ -29,15 +29,21 @@ public class RemoveElement {
     public static int removeElement(int[] nums, int val) {
         int start =0;
         int end =nums.length-1;
-        while (start < end){
-            if (nums[start] == val){
-                nums[start] = nums[end-1];
+        while (start < end) {
+            if(nums[end] == val){
                 end--;
             }
             else {
-                start++;
+                if(nums[start] == val){
+                   nums[start] = nums[end];
+                   nums[end] = val;
+                   start++;
+                   end--;
+                }else {
+                    start++;
+                }
             }
         }
-        return end;
+        return end+1;
     }
 }
