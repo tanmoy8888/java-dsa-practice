@@ -3,7 +3,7 @@ package com.array_7;
 /**
  *  Find two numbers from a given array which sum will be the input
  */
-public class CountSumFromArray_7 {
+public class TwoSum_7 {
     public static void main(String[] args) {
         int [] arr = {-2,5,1,0,4,3,2,10};
         int input = 6;
