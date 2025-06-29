@@ -2,6 +2,10 @@ package com.array_7;
 
 import java.util.Scanner;
 
+/**
+ *  Print the sum of elements of a given array
+ */
+
 public class CalculateSumOfElementsInArray_2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
