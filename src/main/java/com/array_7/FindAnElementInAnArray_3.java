@@ -1,9 +1,12 @@
 package com.array_7;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class FindAnElementInAnArray {
+/**
+ *  LinearSearch
+ */
+
+public class FindAnElementInAnArray_3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int len = sc.nextInt();
