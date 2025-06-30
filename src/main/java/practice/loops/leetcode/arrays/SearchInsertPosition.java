@@ -41,6 +41,7 @@ public class SearchInsertPosition {
     public static int searchInsert(int[] nums, int target) {
        int middleIndex = nums.length/2;
        int middleElement = nums[middleIndex];
+       int index = 0;
         System.out.println("middleElement = " + middleElement);
         System.out.println("middleIndex = " + middleIndex);
        if(middleElement == target){
@@ -49,16 +50,45 @@ public class SearchInsertPosition {
        else {
            int start;
            int end;
+           // If present on the left side
            if(target <middleElement){
               start =0;
               end = middleIndex-1;
-               while (start < end){
-                   // have tp start from here.......
+               while (start < end) {
+                   if(nums[start] == target){
+                       index= start;
+                       break;
+                   }
+                   else if(nums[end] == target){
+                       index= end;
+                       break;
+                   }
+                   else {
+                       start++;
+                       end--;
+                   }
+               }
            }
+           // If present on the right side
+           if(target >middleElement){
+               start =middleIndex+1;
+               end = nums.length-1;
+               while (start < end) {
+                   if(nums[start] == target){
+                       index= start;
+                       break;
+                   }
+                   else if(nums[end] == target){
+                       index = end;
+                       break;
+                   }
+                   else {
+                       start++;
+                       end--;
+                   }
+               }
+           }
+           return index;
        }
-
-
-
-    return 0;
     }
 }
