@@ -1,4 +1,4 @@
-package practice.loops.leetcode.math;
+package practice.leetcode.math;
 
 import java.util.Scanner;
 

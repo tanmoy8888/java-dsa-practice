@@ -1,4 +1,4 @@
-package practice.loops.leetcode.arrays;
+package practice.leetcode.arrays;
 
 import java.util.Arrays;
 import java.util.HashMap;

@@ -1,6 +1,4 @@
-package practice.loops.leetcode.arrays;
-
-import java.util.Arrays;
+package practice.leetcode.arrays;
 
 public class RemoveElement {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package practice.loops.leetcode.arrays;
+package practice.leetcode.arrays;
 
 /**
  *  Leetcode :  35. Search Insert Position

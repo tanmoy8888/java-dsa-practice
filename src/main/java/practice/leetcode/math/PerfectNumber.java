@@ -1,7 +1,5 @@
-package practice.loops.leetcode.math;
+package practice.leetcode.math;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 /**

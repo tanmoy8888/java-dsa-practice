@@ -1,6 +1,4 @@
-package practice.loops.leetcode.math;
-
-import java.util.Scanner;
+package practice.leetcode.math;
 
 /**
  *  Leetcode :  343 : Integer Break

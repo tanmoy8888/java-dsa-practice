@@ -1,4 +1,4 @@
-package practice.loops.leetcode.arrays;
+package practice.leetcode.arrays;
 
 /**
  *   1470. Shuffle the Array
