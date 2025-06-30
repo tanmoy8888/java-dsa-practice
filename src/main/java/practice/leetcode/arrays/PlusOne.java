@@ -5,7 +5,8 @@ import java.util.Arrays;
 public class PlusOne {
     public static void main(String[] args) {
         int [] digits = {1,2,3};
-         plusOne(digits);
+        System.out.println("Input array = " + Arrays.toString(digits));
+        plusOne(digits);
     }
 
     public static int[] plusOne(int[] digits) {
@@ -14,18 +15,18 @@ public class PlusOne {
         for (int i = 0; i < digits.length; i++) {
             if(i==0){
                 number = digits[i]*10+digits[i+1];
-                System.out.println("number = " + number);
+          //      System.out.println("number = " + number);
             }else {
                 if(i < digits.length-1) {
                     number = number * 10 + digits[i + 1];
                 }
             }
         }
-        System.out.println("number = " + number);
+       // System.out.println("number = " + number);
         // Increment it by one
         int incrementedNumber = number+1;
         int num = incrementedNumber;
-        System.out.println("incremented number = " + incrementedNumber);
+       // System.out.println("incremented number = " + incrementedNumber);
         if(incrementedNumber < 10){
             return new int[]{incrementedNumber};
         }else {
@@ -45,22 +46,22 @@ public class PlusOne {
                   }
                 incrementedNumber = incrementedNumber/10;
             }
-            System.out.println("count = " + count);
+            //System.out.println("count = " + count);
             int [] ans = new int[count];
            /* for (int i = 0; i < ans.length; i++) {
 
             }*/
-            System.out.println("incrementedNumber = " + incrementedNumber);
+           // System.out.println("incrementedNumber = " + incrementedNumber);
             int reminderNew =-1;
             int digit = -1;
             int index = ans.length-1;
             while (num!=0){
                 reminderNew = num%10;
                 if(reminderNew > 0){
-                    System.out.println("number = " + num);
+                   // System.out.println("number = " + num);
                     digit = reminderNew;
                     ans[index] = digit;
-                    System.out.println("digit 1 = " + digit);
+                   // System.out.println("digit 1 = " + digit);
                 }
                 if(num < 10){
                     //  digit = number;
@@ -70,7 +71,7 @@ public class PlusOne {
                 num = num/10;
                 index--;
             }
-            System.out.println("Arrays.toString(ans) = " + Arrays.toString(ans));
+            System.out.println("Output array = " + Arrays.toString(ans));
             return ans;
 
         }
