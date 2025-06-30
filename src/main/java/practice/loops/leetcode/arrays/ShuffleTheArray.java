@@ -16,7 +16,7 @@ public class ShuffleTheArray {
             ans[count+1] = nums[i+n];
             count +=2;
         }
-        retun ans;
+        return ans;
     }
 
 }
