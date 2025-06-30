@@ -33,7 +33,8 @@ package practice.loops.leetcode.arrays;
 public class SearchInsertPosition {
     public static void main(String[] args) {
        int [] nums = {1,3,5,6};
-       int target = 5;
+       //int target = 5;
+       int target = 2;
        System.out.println("searchInsert(nums,target) = " + searchInsert(nums, target));
 
     }
@@ -41,7 +42,7 @@ public class SearchInsertPosition {
     public static int searchInsert(int[] nums, int target) {
        int middleIndex = nums.length/2;
        int middleElement = nums[middleIndex];
-       int index = 0;
+       int index = -1;
         System.out.println("middleElement = " + middleElement);
         System.out.println("middleIndex = " + middleIndex);
        if(middleElement == target){
