@@ -13,40 +13,41 @@ public class PlusOne {
     }
 
     public static int[] plusOne(int[] digits) {
-        int number = 1 ;
+        long number = 1 ;
         if(digits.length == 1) {
-            number = digits[0];
+            number = (long) digits[0];
         }else {
             for (int i = 0; i < digits.length; i++) {
                 if (i == 0) {
-                    number = digits[i] * 10 + digits[i + 1];
+                    number = (long)digits[i] * 10 + (long)digits[i + 1];
                 } else {
                     if (i < digits.length - 1) {
-                        number = number * 10 + digits[i + 1];
+                        number = number * 10 + (long)digits[i + 1];
                     }
                 }
             }
         }
-        int incrementedNumber = number+1;
-        int num = incrementedNumber;
+        long incrementedNumber = number+1;
+        long num = incrementedNumber;
         if(incrementedNumber < 10){
-            return new int[]{incrementedNumber};
+            int incrementedNumber1 = (int) incrementedNumber;
+            return new int[]{incrementedNumber1};
         }else {
             int count = 0;
             while(incrementedNumber > 0){
-                int reminder = incrementedNumber%10;
+                long reminder = incrementedNumber%10;
                 count++;
                 incrementedNumber = incrementedNumber/10;
             }
             int [] ans = new int[count];
-            int reminderNew =-1;
-            int digit = -1;
+            long reminderNew =-1;
+            long digit = -1;
             int index = ans.length-1;
             while (num!=0){
                 reminderNew = num%10;
                 if(reminderNew > 0){
                     digit = reminderNew;
-                    ans[index] = digit;
+                    ans[index] = (int)digit;
                 }
                 if(num < 10){
                     break;
