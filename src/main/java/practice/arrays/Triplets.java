@@ -1,9 +1,6 @@
 package practice.arrays;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Target Sum :
@@ -12,19 +9,31 @@ import java.util.Map;
  */
 public class Triplets {
     public static void main(String[] args) {
-        int [] arr = {4,6,3,5,8,2};
-        int target = 7;
+        int [] arr = {5,0,1,2,4,3,9,10};
+        Arrays.sort(arr);
+        int target = 6;
         List<List<Integer>> list = new ArrayList<>();
-        Map<Integer,Integer> map = new HashMap<>();
         for (int i = 0; i < arr.length; i++) {
-            if(map.containsKey(target-arr[i])){
-                List<Integer> ans = new ArrayList<>();
-                ans.add(arr[i]);
-                ans.add(target-arr[i]);
-                list.add(ans);
-            }else {
-                map.put(arr[i],1);
-
+            int start = i+1;
+            int end = arr.length-1;
+            while (start< end){
+                if(arr[i]+arr[start]+arr[end] == target){
+                    List<Integer> triplet = new ArrayList<>();
+                    triplet.add(arr[i]);
+                    triplet.add(arr[start]);
+                    triplet.add(arr[end]);
+                    list.add(triplet);
+                    start++;
+                    end--;
+                }
+                else if (arr[i]+arr[start]+arr[end]  < target){
+                    start++;
+                }
+                else {
+                    end--;
+                }
+            }
+        }
         System.out.println("list = " + list);
     }
 
