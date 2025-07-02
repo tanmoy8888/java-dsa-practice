@@ -8,7 +8,7 @@ public class ReturnSmallestAndLargestElementsOfAnArray {
         System.out.println("findSmallAndLarge(arr) = " + Arrays.toString(findSmallAndLarge(arr)));
     }
 
-    public static int [] findSmallAndLarge(int [] arr){
+    /*public static int [] findSmallAndLarge(int [] arr){
         int max = 0;
         int min = 0;
         for (int i = 1; i < arr.length; i++) {
@@ -19,5 +19,11 @@ public class ReturnSmallestAndLargestElementsOfAnArray {
             }
         }
         return new int []{min,max};
+    }*/
+
+    // Another approach
+    public static int [] findSmallAndLarge(int [] arr){
+     Arrays.sort(arr);
+     return new int[]{arr[0],arr[arr.length-1]};
     }
 }
