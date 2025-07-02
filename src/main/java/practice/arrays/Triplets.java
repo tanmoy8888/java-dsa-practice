@@ -3,7 +3,7 @@ package practice.arrays;
 import java.util.*;
 
 /**
- * Target Sum :
+ * Target Sum in an array : (GFG)
  *  Find the pairs of target sum in the gi/
  *
  */
