@@ -6,7 +6,8 @@ import java.util.Arrays;
 
 public class CopyZerosAtTheEnd {
     public static void main(String[] args) {
-        int[] arr = {4, 5, 0, 10, 0, 1, 0, 3, 7, 0, 0};
+       // int[] arr = {4, 5, 0, 10, 0, 1, 0, 3, 7, 0, 0};
+        int[] arr = {0,1,0,3,12};
         System.out.println("Before = " + Arrays.toString(arr));
         int start = 0;
         int end = arr.length - 1;
