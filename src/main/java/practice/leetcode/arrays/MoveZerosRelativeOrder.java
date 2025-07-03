@@ -3,34 +3,33 @@ package practice.leetcode.arrays;
 import java.util.Arrays;
 
 /**
- *  Leetcode :  283. Move Zeroes
- *
- *   Given an integer numsay nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
- *
+ * Leetcode :  283. Move Zeroes
+ * <p>
+ * Given an integer numsay nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+ * <p>
  * Note that you must do this in-place without making a copy of the numsay.
- *
- *
+ * <p>
+ * <p>
  * Example 1:
- *
+ * <p>
  * Input: nums = [0,1,0,3,12]
  * Output: [1,3,12,0,0]
  * Example 2:
- *
+ * <p>
  * Input: nums = [0]
  * Output: [0]
- *
- *
+ * <p>
+ * <p>
  * Constraints:
- *
+ * <p>
  * 1 <= nums.length <= 104
  * -231 <= nums[i] <= 231 - 1
- *
  */
 public class MoveZerosRelativeOrder {
     public static void main(String[] args) {
         //int[] nums = {4, 5, 0, 10, 0, 1, 0, 3, 7, 0, 0};
         //int[] nums = {0,1,0,3,12};
-        int[] nums = {0,12,3};
+        int[] nums = {0, 12, 3};
         System.out.println("Before = " + Arrays.toString(nums));
         moveZeroes(nums);
     }
@@ -81,32 +80,15 @@ public class MoveZerosRelativeOrder {
     }*/
 
     public static void moveZeroes(int[] nums) {
-    /*    int start = 0;
-        int end = 0;
-        while (start < nums.length-1){
-            if(nums[start] == 0){
-                start++;
-            }
-            else {
-                int temp = nums[start];
-                nums[start] = nums[end];
-                nums[end] = temp;
-                start++;
-                end++;
-            }
-        }*/
-        int j=0;  // Pointer to place the next non-zero element
-        for(int i=0;i<nums.length;i++) {
+        int count = 0;
+        for (int i = 0; i < nums.length; i++) {
             if (nums[i] != 0) {
-                // Swap current element with the element at index j
                 int temp = nums[i];
-                nums[i] = nums[j];
-                nums[j] = temp;
-
-                j++;  // Move j to the next index for placing non-zero
+                nums[i] = nums[count];
+                nums[count] = temp;
+                count++;
             }
         }
-
         System.out.println("Arrays.toString(nums) = " + Arrays.toString(nums));
     }
 
