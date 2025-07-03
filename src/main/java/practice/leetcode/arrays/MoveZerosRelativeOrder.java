@@ -33,7 +33,7 @@ public class MoveZerosRelativeOrder {
         System.out.println("Before = " + Arrays.toString(nums));
         moveZeroes(nums);
     }
-    public static void moveZeroes(int[] nums) {
+    /*public static void moveZeroes(int[] nums) {
         int start = 0;
         int end = nums.length - 1;
         while (start < end) {
@@ -42,25 +42,70 @@ public class MoveZerosRelativeOrder {
             } else if (nums[start] == 0) {
                 nums[start] = nums[end];
                 nums[end] = 0;
-                if((nums[start+1] != 0) && (nums[start] > nums[start+1])){
-                    System.out.println("if condition...");
-                    int temp = nums[start];
-                    nums[start] = nums[start+1];
-                    nums[start+1] = temp;
-                }
-           /*     if((nums[end] != 0) && (nums[end] > nums[end-1])){
+
+                if((nums[end] != 0) && (nums[end] > nums[end-1])){
                     System.out.println("if condition...");
                     int temp = nums[end-1];
                     nums[end-1] = nums[end];
                     nums[end] = temp;
-                }*/
+                }
                 System.out.println(start);
                 start++;
                 end--;
             } else {
+                if((nums[start-1] > 0) && (nums[start] < nums[start-1])){
+                    System.out.println("if condition...");
+                    int temp = nums[start];
+                    nums[start] = nums[start-1];
+                    nums[start-1] = temp;
+                }
                 start++;
-            
+            }
         }
         System.out.println("After = " + Arrays.toString(nums));
+    }*/
+
+  /*  public static void moveZeroes(int[] nums) {
+        for(int i=0,j=0;i<nums.length;){
+            if(nums[i]==0) i++;
+            else{
+                int temp = nums[i];
+                nums[i] = nums[j];
+                nums[j] = temp;
+                i++;
+                j++;
+            }
+        }
+        System.out.println("Arrays.toString(nums) = " + Arrays.toString(nums));
+    }*/
+
+    public static void moveZeroes(int[] nums) {
+        int start = 0;
+        int end = 0;
+        while (start < nums.length-1){
+            if(nums[start] == 0){
+                start++;
+            }
+            else {
+                int temp = nums[start];
+                nums[start] = nums[end];
+                nums[end] = temp;
+                start++;
+                end++;
+            }
+        }
+        /*
+        for(int i=0,j=0;i<nums.length;){
+            if(nums[i]==0) i++;
+            else{
+                int temp = nums[i];
+                nums[i] = nums[j];
+                nums[j] = temp;
+                i++;
+                j++;
+            }
+        }
+        System.out.println("Arrays.toString(nums) = " + Arrays.toString(nums));*/
     }
+
 }
