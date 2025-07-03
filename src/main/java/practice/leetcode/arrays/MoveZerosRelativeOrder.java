@@ -29,7 +29,8 @@ import java.util.Arrays;
 public class MoveZerosRelativeOrder {
     public static void main(String[] args) {
         //int[] nums = {4, 5, 0, 10, 0, 1, 0, 3, 7, 0, 0};
-        int[] nums = {0,1,0,3,12};
+        //int[] nums = {0,1,0,3,12};
+        int[] nums = {0,12,3};
         System.out.println("Before = " + Arrays.toString(nums));
         moveZeroes(nums);
     }
@@ -80,7 +81,7 @@ public class MoveZerosRelativeOrder {
     }*/
 
     public static void moveZeroes(int[] nums) {
-        int start = 0;
+    /*    int start = 0;
         int end = 0;
         while (start < nums.length-1){
             if(nums[start] == 0){
@@ -93,19 +94,20 @@ public class MoveZerosRelativeOrder {
                 start++;
                 end++;
             }
-        }
-        /*
-        for(int i=0,j=0;i<nums.length;){
-            if(nums[i]==0) i++;
-            else{
+        }*/
+        int j=0;  // Pointer to place the next non-zero element
+        for(int i=0;i<nums.length;i++) {
+            if (nums[i] != 0) {
+                // Swap current element with the element at index j
                 int temp = nums[i];
                 nums[i] = nums[j];
                 nums[j] = temp;
-                i++;
-                j++;
+
+                j++;  // Move j to the next index for placing non-zero
             }
         }
-        System.out.println("Arrays.toString(nums) = " + Arrays.toString(nums));*/
+
+        System.out.println("Arrays.toString(nums) = " + Arrays.toString(nums));
     }
 
 }
