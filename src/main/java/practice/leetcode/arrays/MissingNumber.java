@@ -4,6 +4,10 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Leetcode :  268. Missing Number
+ * 
+ */
 public class MissingNumber {
     public static void main(String[] args) {
         //int [] nums = {3,0,1};
@@ -14,19 +18,14 @@ public class MissingNumber {
 
     public static int missingNumber(int[] nums) {
         int missingNumber = -1;
-        Arrays.sort(nums);
-        Map<Integer,Integer> map = new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
-            map.put(nums[i],1);
+            map.put(nums[i], 1);
         }
-        int [] reference = new int[nums.length+1];
-        for (int i = 0; i < reference.length; i++) {
-            reference[i]=i;
-        }
-        for (int i = 0; i <reference.length; i++) {
-            if(!map.containsKey(i)){
-                 missingNumber = i;
-                 break;
+        for (int i = 0; i < nums.length + 1; i++) {
+            if (!map.containsKey(i)) {
+                missingNumber = i;
+                break;
             }
         }
         return missingNumber;
