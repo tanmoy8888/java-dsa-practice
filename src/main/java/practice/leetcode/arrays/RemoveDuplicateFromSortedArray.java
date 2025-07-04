@@ -21,13 +21,14 @@ import java.util.Map;
 public class RemoveDuplicateFromSortedArray {
     public static void main(String[] args) {
         //int [] nums = {0,0,1,1,1,2,2,3,3,4};
-        //int [] nums = {1,1,2};
-        int [] nums = {1};
+        int [] nums = {1,2,3,4,5};
+        //int [] nums = {1,2};
+        //int [] nums = {1};
         System.out.println("Input array :: "+Arrays.toString(nums));
         System.out.println("Unique Elements :: "+removeDuplicates(nums));
     }
 
-    public static int removeDuplicates(int[] nums) {
+   /* public static int removeDuplicates(int[] nums) {
         int count = 0;
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
@@ -38,5 +39,17 @@ public class RemoveDuplicateFromSortedArray {
           }
         }
         return count;
+    }*/
+
+    public static int removeDuplicates(int[] nums) {
+        int count = 0;
+        for (int i = 1; i < nums.length; i++) {
+          if(nums[count] != nums[i]){
+              count++;
+              nums[count] = nums[i];
+          }
+        }
+        System.out.println("Arrays.toString(nums) = " + Arrays.toString(nums));
+        return count+1;
     }
 }
