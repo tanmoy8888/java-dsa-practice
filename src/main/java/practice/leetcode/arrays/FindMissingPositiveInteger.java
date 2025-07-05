@@ -63,8 +63,8 @@ public class FindMissingPositiveInteger {
             return missing;
     }*/
 
-    // Another approach
-    
+    // Another approach [from leetcode discussion]
+
     public static int firstMissingPositive(int[] nums) {
         Arrays.sort(nums);
         System.out.println("Arrays.toString(nums) = " + Arrays.toString(nums));
