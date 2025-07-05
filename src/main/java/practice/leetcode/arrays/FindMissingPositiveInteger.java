@@ -64,6 +64,7 @@ public class FindMissingPositiveInteger {
     }*/
 
     // Another approach
+    
     public static int firstMissingPositive(int[] nums) {
         Arrays.sort(nums);
         System.out.println("Arrays.toString(nums) = " + Arrays.toString(nums));
@@ -72,7 +73,6 @@ public class FindMissingPositiveInteger {
             if(nums[i]==smallest){
                 smallest++;
             }
-
         }
         return smallest;
     }
