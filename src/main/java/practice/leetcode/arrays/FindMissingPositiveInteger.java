@@ -38,22 +38,15 @@ import java.util.Map;
 public class FindMissingPositiveInteger {
     public static void main(String[] args) {
         // int [] nums = {3,4,-1,1};
-         int [] nums = {2,1};
-        //int [] nums = {1,2,0};
-        //int [] nums = {7,8,9,11,12};
+         //int [] nums = {2,1};
+       // int [] nums = {1,2,0};
+        int [] nums = {7,8,9,11,12};
         //int[] nums = {1};
         System.out.println("Arrays.toString(nums) = " + Arrays.toString(nums));
         System.out.println("Output  = " + firstMissingPositive(nums));
     }
 
-    public static int firstMissingPositive(int[] nums) {
-        if (nums.length == 1) {
-           if(nums[0] == 1 ) {
-               return 2;
-           } else {
-               return 1;
-           }
-        } else {
+   /* public static int firstMissingPositive(int[] nums) {
             Map<Integer, Integer> map = new HashMap<>();
             int missing = 0;
             for (int i = 0; i < nums.length; i++) {
@@ -68,6 +61,19 @@ public class FindMissingPositiveInteger {
                 }
             }
             return missing;
+    }*/
+
+    // Another approach
+    public static int firstMissingPositive(int[] nums) {
+        Arrays.sort(nums);
+        System.out.println("Arrays.toString(nums) = " + Arrays.toString(nums));
+        int smallest=1;
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]==smallest){
+                smallest++;
+            }
+
         }
+        return smallest;
     }
 }
