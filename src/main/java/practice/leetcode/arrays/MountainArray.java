@@ -26,7 +26,6 @@ public class MountainArray {
             boolean isMountainArray = true;
             int start = 0;
             int end = arr.length - 1;
-            System.out.println("max = " + max);
             while (start < end) {
                 if (arr[start] < arr[start + 1]) {
                     start++;
