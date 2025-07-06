@@ -15,7 +15,7 @@ public class ArrayRotationByKThPosition_9 {
         int[] arr = {2, 3, 5, 7, 11, 13, 17};
         System.out.println("original array = " + Arrays.toString(arr));
         int k = 5;
-        if (k > args.length) {
+        if (k > arr.length) {
             k = k % arr.length;
         }
         // First Rotate entire array
