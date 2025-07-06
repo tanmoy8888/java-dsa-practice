@@ -12,9 +12,10 @@ import java.util.Scanner;
  */
 public class ArrayRotationByKThPosition_9 {
     public static void main(String[] args) {
-        int[] arr = {2, 3, 5, 7, 11, 13, 17};
+        //int[] arr = {2, 3, 5, 7, 11, 13, 17};
+        int[] arr = {1,2,3,4,5,6,7};
         System.out.println("original array = " + Arrays.toString(arr));
-        int k = 5;
+        int k = 3;
         if (k > arr.length) {
             k = k % arr.length;
         }

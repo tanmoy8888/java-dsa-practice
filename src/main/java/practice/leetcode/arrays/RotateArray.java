@@ -16,6 +16,7 @@ public class RotateArray {
     }
 
     public static void rotate(int[] nums, int k) {
+        k = k+1;
         if (k > nums.length) {
             k = k % nums.length;
         }
