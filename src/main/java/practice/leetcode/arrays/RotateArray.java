@@ -3,7 +3,7 @@ package practice.leetcode.arrays;
 import java.util.Arrays;
 
 /**
- * Leetcode : 189. Rotate Array
+ * Leetcode : 189. Rotate Array : Hard Problem
  */
 public class RotateArray {
     public static void main(String[] args) {
