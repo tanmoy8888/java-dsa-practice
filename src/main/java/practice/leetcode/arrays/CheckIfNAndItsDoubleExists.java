@@ -9,7 +9,8 @@ import java.util.Map;
  */
 public class CheckIfNAndItsDoubleExists {
     public static void main(String[] args) {
-        int [] arr = {10,2,5,3};
+        //int [] arr = {10,2,5,3};
+        int [] arr = {3,1,7,11};
         System.out.println("checkIfExist(arr) = " + checkIfExist(arr));
     }
     public static boolean checkIfExist(int[] arr) {
