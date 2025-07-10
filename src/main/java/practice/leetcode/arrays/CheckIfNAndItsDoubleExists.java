@@ -8,10 +8,10 @@ import java.util.Map;
  */
 public class CheckIfNAndItsDoubleExists {
     public static void main(String[] args) {
-        //int [] arr = {10,2,5,3};
+        int [] arr = {10,2,5,3};
         // int [] arr = {3,1,7,11};
         // int [] arr = {0,-2,2};
-        int[] arr = {0, 0};
+       // int[] arr = {0, 0};
         System.out.println("checkIfExist(arr) = " + checkIfExist(arr));
     }
 
@@ -20,7 +20,6 @@ public class CheckIfNAndItsDoubleExists {
         boolean exists = false;
         int count = 1;
         for (int i = 0; i < arr.length; i++) {
-            System.out.println("arr[i] = " + arr[i]);
             if (map.containsKey(arr[i])) {
                 map.put(arr[i], count + 1);
             } else {
@@ -31,8 +30,7 @@ public class CheckIfNAndItsDoubleExists {
         if (map.size() == 1 && map.get(0) == 2) return true;
         else {
             for (int i = 0; i < arr.length; i++) {
-                int j = 2 * arr[i];
-                if (map.containsKey(j)) {
+                if (map.containsKey(2 * arr[i]) && arr[i] != 0) {
                     System.out.println("arr[i] = " + arr[i]);
                     exists = true;
                     break;
