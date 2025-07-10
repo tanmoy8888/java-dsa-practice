@@ -19,7 +19,6 @@ public class CheckIfNAndItsDoubleExists {
         for (int i = 0; i < arr.length; i++) {
            map.put(arr[i], 1);
         }
-        System.out.println("map.keySet() = " + map.keySet());
         for (int i = 0; i < arr.length; i++) {
             if(map.containsKey(2*arr[i])){
                 System.out.println("arr[i] = " + arr[i]);
