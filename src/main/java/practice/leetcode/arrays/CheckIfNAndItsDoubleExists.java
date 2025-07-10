@@ -18,16 +18,17 @@ public class CheckIfNAndItsDoubleExists {
 
     public static boolean checkIfExist(int[] arr) {
         Map<Integer, Integer> map = new HashMap<>();
-        for(int i=0;i<arr.length-1;){
-            map.put(arr[i]*2, null);
-            if(arr[i]%2==0){
-                map.put(arr[i]/2, null);
-            }
-            i++;
-            if(map.containsKey(arr[i])){
+        int n = arr.length;
+        for (int i = 0; i < n; i++){
+            map.put(arr[i], i);
+        }
+        for (int i = 0; i < n; i++) {
+            if (map.containsKey(2 * arr[i]) &&
+                    map.get(2 * arr[i]) != i) {
                 return true;
             }
         }
+
         return false;
     }
 }
