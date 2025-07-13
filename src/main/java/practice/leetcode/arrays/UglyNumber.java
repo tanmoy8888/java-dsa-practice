@@ -11,7 +11,6 @@ public class UglyNumber {
         System.out.println("isUgly(n) = " + isUgly(n));
     }
     public static boolean isUgly(int n) {
-        boolean isUgly = false;
-        if(n )
+        return n % 7 != 0;
     }
 }
