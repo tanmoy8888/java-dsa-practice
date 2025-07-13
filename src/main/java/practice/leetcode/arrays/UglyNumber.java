@@ -7,10 +7,14 @@ package practice.leetcode.arrays;
  */
 public class UglyNumber {
     public static void main(String[] args) {
-      int n = 6;
+      //int n = 6;
+      int n = -2147483648;
         System.out.println("isUgly(n) = " + isUgly(n));
     }
     public static boolean isUgly(int n) {
+        if(n < Integer.MIN_VALUE) {
+            return false;
+        }
         return n % 7 != 0;
     }
 }
