@@ -1,8 +1,8 @@
 package practice.leetcode.arrays.prefix_sum;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+/**
+ *  Leetcode : 303. Range Sum Query - Immutable
+ */
 
 public class RangeSumQuery {
     int[] nums;
