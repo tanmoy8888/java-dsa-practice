@@ -8,16 +8,18 @@ public class ContinuesSubArraySum {
         int k = 6;*/
         /*int [] nums = {23,2,6,4,7};
         int k = 13;*/
-        int [] nums = {23,2,4,6,6};
-        int k = 7;
+       /* int [] nums = {23,2,4,6,6};
+        int k = 7;*/
+        int[] nums = {5, 0, 0, 0};
+        int k = 3;
         System.out.println("Output = " + checkSubarraySum(nums, k));
     }
 
     public static boolean checkSubarraySum(int[] nums, int k) {
         boolean found = false;
         for (int i = 1; i < nums.length; i++) {
-            nums[i] += nums[i-1];
-            if((nums[i] == k || nums[i]%k == 0) && i >2){
+            nums[i] += nums[i - 1];
+            if (((nums[i] == k || nums[i] % k == 0) && i > 2) || (nums[i] == 0) && i > 2) {
                 found = true;
             }
         }
