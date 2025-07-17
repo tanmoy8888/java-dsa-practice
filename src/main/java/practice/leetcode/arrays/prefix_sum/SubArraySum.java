@@ -27,10 +27,8 @@ public class SubArraySum {
         System.out.println("Arrays.toString(nums) = " + Arrays.toString(nums));
         System.out.println("map.entrySet() = " + map.entrySet());
 
-        for (int i = 1; i < nums.length; i++) {
-            if(nums[i] == k || (nums[i]-k == nums[i-1])){
-                count++;
-            }
+        for (int i = 0; i < nums.length; i++) {
+
         }
         return count;
     }
