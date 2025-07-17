@@ -19,7 +19,7 @@ public class ContinuesSubArraySum {
         boolean found = false;
         for (int i = 1; i < nums.length; i++) {
             nums[i] += nums[i - 1];
-            if (((nums[i] == k || nums[i] % k == 0) && i > 2) || (nums[i] == 0) && i > 2) {
+            if (((nums[i] == k || nums[i] % k == 0) && i > 2) || ((nums[i] == 0) && (nums[i-1] == 0) && (i > 2))) {
                 found = true;
             }
         }
