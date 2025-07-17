@@ -10,8 +10,8 @@ public class ContinuesSubArraySum {
         int k = 13;*/
        /* int [] nums = {23,2,4,6,6};
         int k = 7;*/
-        int[] nums = {5, 0, 0, 0};
-        int k = 3;
+        int[] nums = {0,0};
+        int k = 1;
         System.out.println("Output = " + checkSubarraySum(nums, k));
     }
 
@@ -19,7 +19,7 @@ public class ContinuesSubArraySum {
         boolean found = false;
         for (int i = 1; i < nums.length; i++) {
             nums[i] += nums[i - 1];
-            if (((nums[i] == k || nums[i] % k == 0) && i > 2) || ((nums[i] == 0) && (nums[i-1] == 0) && (i > 2))) {
+            if (nums[i] == k ||((nums[i] == k || nums[i] % k == 0) && i > 2) || ((nums[i] % k == nums[i - 1] % k) && (i > 2))) {
                 found = true;
             }
         }
