@@ -21,13 +21,14 @@ public class SubArraySum {
     public static int subarraySum(int[] nums, int k) {
         int count =0;
         for (int i = 0; i < nums.length; i++) {
-            for (int j = 1; j <= i; j++) {
+            int sum = 0;
+            for (int j = i; j < nums.length; j++) {
                 System.out.println("i = " + i);
                 System.out.println("j = " + j);
-                if((nums[i]+nums[j]) == k){
-                    System.out.println("nums[i] = " + nums[i]);
-                    System.out.println("nums[j] = " + nums[j]);
-                    System.out.println("nums[i] +nums[j] = " + (nums[i]+nums[j]));
+                sum = sum+nums[j];
+                System.out.println("sum = " + sum);
+                System.out.println("nums[j] = " + nums[j]);
+                if(sum == k){
                     count++;
                 }
             }
