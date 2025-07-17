@@ -10,13 +10,15 @@ public class SubArraySumDivisiableByK {
     }
     public static int subarraysDivByK(int[] nums, int k) {
         Arrays.sort(nums);
+        System.out.println("Arrays.toString(nums) = " + Arrays.toString(nums));
         int count = 0;
         for (int i = 1; i < nums.length; i++) {
             nums[i] += nums[i-1];
-            if(nums[i] == k){
+            if(nums[i]%k == 0){
                 count++;
             }
         }
+        System.out.println("Prefix Sum = " + Arrays.toString(nums));
         return count;
     }
 }
