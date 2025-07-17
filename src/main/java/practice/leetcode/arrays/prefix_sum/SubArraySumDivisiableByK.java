@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  *  Leetcode : 560. Subarray Sum Equals K
- *  
+ *
  */
 
 public class SubArraySumDivisiableByK {
