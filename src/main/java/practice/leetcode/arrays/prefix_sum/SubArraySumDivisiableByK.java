@@ -2,6 +2,11 @@ package practice.leetcode.arrays.prefix_sum;
 
 import java.util.Arrays;
 
+/**
+ *  Leetcode : 560. Subarray Sum Equals K
+ *  
+ */
+
 public class SubArraySumDivisiableByK {
     public static void main(String[] args) {
         int [] nums ={4,5,0,-2,-3,1};
