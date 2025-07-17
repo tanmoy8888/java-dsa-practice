@@ -17,14 +17,17 @@ public class SubArraySum {
         int count = 0;
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 1; i < nums.length; i++) {
-            nums[i] = nums[i - 1] + nums[i];
+            nums[i] += nums[i - 1];
             map.put(nums[i], 1);
         }
         System.out.println("Arrays.toString(nums) = " + Arrays.toString(nums));
         System.out.println("map.entrySet() = " + map.entrySet());
 
-
-
+        for (int i = 1; i < nums.length; i++) {
+            if(nums[i] == k || (nums[i]-k == nums[i-1])){
+                count++;
+            }
+        }
         return count;
     }
 }
