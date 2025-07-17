@@ -17,18 +17,20 @@ public class SubArraySum {
         System.out.println("Output = " + subarraySum(nums, k));
     }
 
+    // Bruteforce
     public static int subarraySum(int[] nums, int k) {
-        int count = 0;
-        Map<Integer, Integer> map = new HashMap<>();
-        for (int i = 1; i < nums.length; i++) {
-            nums[i] += nums[i - 1];
-            map.put(nums[i], 1);
-        }
-        System.out.println("Arrays.toString(nums) = " + Arrays.toString(nums));
-        System.out.println("map.entrySet() = " + map.entrySet());
-
+        int count =0;
         for (int i = 0; i < nums.length; i++) {
-
+            for (int j = 1; j <= i; j++) {
+                System.out.println("i = " + i);
+                System.out.println("j = " + j);
+                if((nums[i]+nums[j]) == k){
+                    System.out.println("nums[i] = " + nums[i]);
+                    System.out.println("nums[j] = " + nums[j]);
+                    System.out.println("nums[i] +nums[j] = " + (nums[i]+nums[j]));
+                    count++;
+                }
+            }
         }
         return count;
     }
