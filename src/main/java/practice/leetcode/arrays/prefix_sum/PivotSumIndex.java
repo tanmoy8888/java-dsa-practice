@@ -14,18 +14,21 @@ public class PivotSumIndex {
     }
 
     public static int pivotIndex(int[] nums) {
+        int pivotIndex = -1;
      int [] prefixSumLeft = new int[nums.length];
         int sum = 0;
         for (int i = nums.length-1; i >=0  ; i--) {
             sum += nums[i];
-            System.out.println("sum = " + sum);
             prefixSumLeft[i] = sum;
         }
-        System.out.println("Output right= " + Arrays.toString(prefixSumLeft));
         for (int i = 1; i < nums.length; i++) {
             nums[i] += nums[i-1];
         }
-        System.out.println("Output left= " + Arrays.toString(nums));
-        return -1;
+        for (int i = 0; i < nums.length; i++) {
+            if(nums[i] == prefixSumLeft[i]){
+                pivotIndex = i;
+            }
+        }
+        return pivotIndex;
     }
 }
