@@ -28,8 +28,10 @@ public class PivotSumIndex {
         System.out.println("prefixSumLeft = " + Arrays.toString(prefixSumLeft));
         System.out.println("nums = " + Arrays.toString(nums));
         for (int i = 0; i < nums.length; i++) {
+            System.out.println("i = " + i+" prefixSumLeft[i] : "+prefixSumLeft[i]+" nums[i] : "+nums[i]);
             if (nums[i] == prefixSumLeft[i]) {
                 pivotIndex = i;
+                break;
             }
         }
         return pivotIndex;
