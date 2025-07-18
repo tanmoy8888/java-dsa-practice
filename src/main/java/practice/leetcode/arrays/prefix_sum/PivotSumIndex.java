@@ -16,11 +16,10 @@ public class PivotSumIndex {
     public static int pivotIndex(int[] nums) {
      int [] prefixSumLeft = new int[nums.length];
         int sum = 0;
-        int count = 0;
         for (int i = nums.length-1; i >=0  ; i--) {
             sum += nums[i];
-            prefixSumLeft[count] = sum;
-            count++;
+            System.out.println("sum = " + sum);
+            prefixSumLeft[i] = sum;
         }
         System.out.println("Output right= " + Arrays.toString(prefixSumLeft));
         for (int i = 1; i < nums.length; i++) {
