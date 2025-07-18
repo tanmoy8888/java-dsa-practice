@@ -18,8 +18,8 @@ public class PivotSumIndex {
         int sum = 0;
         int count = 0;
         for (int i = nums.length-1; i >=0  ; i--) {
-            System.out.println("i = " + i);
-            prefixSumLeft[count] = sum + nums[i];
+            sum += nums[i];
+            prefixSumLeft[count] = sum;
             count++;
         }
         System.out.println("Output right= " + Arrays.toString(prefixSumLeft));
