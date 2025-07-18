@@ -8,7 +8,8 @@ Leetcode : 724. Find Pivot Index
  */
 public class PivotSumIndex {
     public static void main(String[] args) {
-        int[] nums = {1, 7, 3, 6, 5, 6};
+        //int[] nums = {1, 7, 3, 6, 5, 6};
+        int[] nums = {-1,-1,0,0,-1,-1};
         System.out.println("Input = " + Arrays.toString(nums));
         System.out.println("Output = " + pivotIndex(nums));
     }
@@ -24,6 +25,8 @@ public class PivotSumIndex {
         for (int i = 1; i < nums.length; i++) {
             nums[i] += nums[i - 1];
         }
+        System.out.println("prefixSumLeft = " + Arrays.toString(prefixSumLeft));
+        System.out.println("nums = " + Arrays.toString(nums));
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] == prefixSumLeft[i]) {
                 pivotIndex = i;
