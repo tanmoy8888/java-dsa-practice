@@ -1,17 +1,15 @@
 package practice.leetcode.math;
 
 
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class NthDigit {
     public static void main(String[] args) {
-        int n = 3;
+        int n = 15;
         System.out.println("Output = " + findNthDigit(n));
     }
 
-    public static int findNthDigit(int n) {
+    /*public static int findNthDigit(int n) {
         List<Integer> list = new LinkedList<>();
         for (int i = 1; i <= n; i++) {
             if (i <= 9) {
@@ -19,7 +17,7 @@ public class NthDigit {
             } else {
                 List<Integer> digits = new LinkedList<>();
                 int number = i;
-                int reminder = 0;
+                int reminder;
                 while (number != 0) {
                     if (number < 10) {
                         digits.add(number);
@@ -34,5 +32,14 @@ public class NthDigit {
             }
         }
         return list.get(n - 1);
+    }*/
+    // Another approach
+
+    public static int findNthDigit(int n) {
+        StringBuilder number = new StringBuilder();
+        for (int i = 1; i <= n; i++) {
+            number.append(i);
+        }
+        return number.charAt(n - 1) - '0';
     }
 }
