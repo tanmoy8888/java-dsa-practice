@@ -32,7 +32,6 @@ public class NthDigit {
                 Collections.reverse(digits);
                 list.addAll(digits);
             }
-
         }
         return list.get(n - 1);
     }
