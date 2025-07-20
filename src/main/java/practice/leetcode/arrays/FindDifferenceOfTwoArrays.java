@@ -23,7 +23,7 @@ public class FindDifferenceOfTwoArrays {
         for (int j : nums2) {
             set2.add(j);
         }
-        for (int i = 0; i < set1.size(); i++) {
+        for (int i = 0; i < nums2.length; i++) {
             if (!set1.contains(nums2[i])) {
                 num2Set.add(nums2[i]);
             }
