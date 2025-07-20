@@ -15,19 +15,21 @@ public class FindDifferenceOfTwoArrays {
     public static List<List<Integer>> findDifference(int[] nums1, int[] nums2) {
         List<List<Integer>> list = new ArrayList<>();
         Set<Integer> num2Set = new HashSet<>();
-        Set<Integer> set = new HashSet<>();
-        for (int i = 0; i < nums1.length; i++) {
-            set.add(nums1[i]);
+        Set<Integer> set1 = new HashSet<>();
+        for (int k : nums1) {
+            set1.add(k);
         }
-        System.out.println("set = " + set);
-        for (int i = 0; i < set.size(); i++) {
-            if (!set.contains(nums2[i])) {
+        Set<Integer> set2 = new HashSet<>();
+        for (int j : nums2) {
+            set2.add(j);
+        }
+        for (int i = 0; i < set1.size(); i++) {
+            if (!set1.contains(nums2[i])) {
                 num2Set.add(nums2[i]);
             }
         }
-        System.out.println("num2Set = " + num2Set);
-        set.removeAll(nums2);
-        list.add(new ArrayList<>(set));
+        set1.removeAll(set2);
+        list.add(new ArrayList<>(set1));
         list.add(new ArrayList<>(num2Set));
         return list;
     }
