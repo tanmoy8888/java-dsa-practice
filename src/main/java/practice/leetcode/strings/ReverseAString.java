@@ -25,7 +25,7 @@ import java.util.Arrays;
  *
  * 1 <= s.length <= 105
  * s[i] is a printable ascii character.
- * 
+ *
  */
 
 public class ReverseAString {
@@ -45,5 +45,6 @@ public class ReverseAString {
             start++;
             end--;
         }
+        System.out.println("Output = " + Arrays.toString(s));
     }
 }
