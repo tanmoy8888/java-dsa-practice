@@ -11,7 +11,8 @@ public class MajorityElementTwo {
         //int[] nums = {3, 2, 3};
         //int[] nums = {2,2};
         // int[] nums = {1};
-        int[] nums = {1, 2};
+        //int[] nums = {1, 2};
+        int[] nums = {0,0,0};
         System.out.println("Output = " + majorityElement(nums));
     }
 
@@ -37,18 +38,19 @@ public class MajorityElementTwo {
         } else {
             int count = nums.length / 3;
             Map<Integer, Integer> map = new HashMap<>();
-            List<Integer> list = new ArrayList<>();
+            Set<Integer> set = new HashSet<>();
             for (int i = 0; i < nums.length; i++) {
                 if (!map.containsKey(nums[Math.abs(i)])) {
                     map.put(nums[Math.abs(i)], 1);
                 } else {
                     map.put(nums[Math.abs(i)], map.get(nums[Math.abs(i)]) + 1);
                     if (map.get(nums[Math.abs(i)]) > count) {
-                        list.add(nums[Math.abs(i)]);
+                        set.add(nums[Math.abs(i)]);
                     }
                 }
             }
-            return list;
+            System.out.println("map = " + map);
+            return new ArrayList<>(set);
         }
     }
 }
