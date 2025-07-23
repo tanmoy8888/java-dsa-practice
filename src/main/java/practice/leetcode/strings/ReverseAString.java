@@ -23,6 +23,5 @@ public class ReverseAString {
             start++;
             end--;
         }
-        System.out.println("Output = " + Arrays.toString(s));
     }
 }
