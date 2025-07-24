@@ -3,7 +3,7 @@ package practice.leetcode.arrays;
 public class MaxCOnsecutiveOnes {
     public static void main(String[] args) {
         //int[] nums = {1, 1, 0, 1, 1, 1};
-        int[] nums = {1, 1, 0, 1, 1, 1};
+        int[] nums = {1, 0, 1, 1, 0, 1};
         System.out.println("Output = " + findMaxConsecutiveOnes(nums));
     }
 
@@ -15,16 +15,15 @@ public class MaxCOnsecutiveOnes {
                 count++;
             } else {
                 if (count > 0) {
-                    System.out.println("count = " + count);
                     if (count > maxCount) {
                         maxCount = count;
                         count = 0;
                     }
-                }else{
+                } else {
                     count = 0;
                 }
             }
         }
-        return count > maxCount ? count : maxCount;
+        return Math.max(count, maxCount);
     }
 }
