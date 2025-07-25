@@ -27,7 +27,6 @@ public class ProductOfArrayWithoutSelf {
         for (int i = 0; i < nums.length; i++) {
             if (i == 0) {
                 nums[i] = suffixProduct[i + 1];
-
             } else if (i == nums.length - 1) {
                 nums[i] = prefixProduct[i - 1];
             } else {
