@@ -24,7 +24,7 @@ public class ProductOfArrayWithoutSelf {
         int [] suffixProduct = new int[nums.length];
         suffixProduct[nums.length-1] = nums[nums.length-1];
         for (int i = nums.length-2; i > 0; i--) {
-            suffixProduct[i] = nums[i-1] * suffixProduct[i];
+            suffixProduct[i] = nums[i] * suffixProduct[i+1];
         }
         System.out.println("Arrays.toString(prefixProduct) = " + Arrays.toString(suffixProduct));
         return prefixProduct;
