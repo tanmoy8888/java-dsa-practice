@@ -2,6 +2,24 @@ package practice.pattern;
 
 import java.util.Scanner;
 
+/*
+
+Print these below diamond pattern
+
+
+        *
+      * * *
+    * * * * *
+  * * * * * * *
+* * * * * * * * *
+  * * * * * * *
+    * * * * *
+      * * *
+        *
+
+         
+ */
+
 public class DiamondPattern {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
