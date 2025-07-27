@@ -21,7 +21,7 @@ Print these below diamond pattern
  */
 
 public class DiamondPattern {
-    // This is created using nsp and nst pattern
+    /* This is created using nsp and nst pattern */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
