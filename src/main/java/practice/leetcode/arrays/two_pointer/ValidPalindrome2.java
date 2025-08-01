@@ -2,11 +2,15 @@ package practice.leetcode.arrays.two_pointer;
 
 /**
  * Leetcode : 680. Valid Palindrome II
+ *
+ * NOT WORKING
+ *
  */
 public class ValidPalindrome2 {
     public static void main(String[] args) {
         //String s = "abced";
-        String s = "abc";
+        //String s = "abc";
+        String s = "eedede";
         System.out.println("Output = " + validPalindrome(s));
     }
 
@@ -27,7 +31,6 @@ public class ValidPalindrome2 {
                     if (count > 1) {
                         return palindrome;
                     }
-                    start++;
                     end--;
                     count++;
                 }
@@ -36,5 +39,5 @@ public class ValidPalindrome2 {
             return !(count > 1) && iteration > count;
         }
     }
-    
+
 }
