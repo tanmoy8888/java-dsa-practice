@@ -5,7 +5,8 @@ package practice.leetcode.arrays.two_pointer;
  */
 public class ValidPalindrome2 {
     public static void main(String[] args) {
-        String s = "abced";
+        //String s = "abced";
+        String s = "abc";
         System.out.println("Output = " + validPalindrome(s));
     }
 
@@ -17,6 +18,7 @@ public class ValidPalindrome2 {
             int count = 0;
             int start = 0;
             int end = arr.length - 1;
+            int iteration = 0;
             while (start < end) {
                 if (arr[start] == arr[end]) {
                     start++;
@@ -29,8 +31,10 @@ public class ValidPalindrome2 {
                     end--;
                     count++;
                 }
+                iteration++;
             }
-            return !(count > 1);
+            return !(count > 1) && iteration > count;
         }
     }
+    
 }
